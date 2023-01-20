@@ -1,0 +1,77 @@
+body {
+  background-color: #8c38ff;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+span {
+  font-size: 35px;
+  color: #8c38ff;
+}
+.main-content {
+  width: 90%;
+  min-width: 355px;
+  max-width: 1000px;
+  background-color: #fff;
+  border: 2px solid #212121;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+
+  border-radius: 20px;
+
+  margin: 30px auto 0 auto;
+}
+
+.city-input {
+  width: 100%;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  margin: 8px 0px;
+  width: 400px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: 2px solid #8e44ad;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #8c38ff;
+  outline: none;
+}
+
+button {
+  background-color: #8c38ff;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+button:hover {
+  background-color: #8e44ad;
+}
+
+#weather-city {
+  font-size: 35px;
+  font-family: "Luckiest Guy", cursive;
+
+  margin-top: 100px;
+}
+
+#weather-temp {
+  font-size: 100px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+#weather-error {
+  font-size: 40px;
+  font-family: "Luckiest Guy", cursive;
+}
