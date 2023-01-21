@@ -26,7 +26,7 @@ inputCity.addEventListener('keyup', () => {
 				weatherCity.innerHTML = `${cityName}`;
 				weatherTemp.innerHTML = `${temperature}°C`;
 				weatherError.innerHTML = '';
+				console.log(data);
 			}
 		})
-		.catch(err => weatherError.innerHTML = 'City not found');
 });
