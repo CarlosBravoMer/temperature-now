@@ -71,6 +71,10 @@ button:hover {
   font-family: "Luckiest Guy", cursive;
 }
 
+#weather-temp p {
+  margin: 0;
+}
+
 #weather-error {
   font-size: 40px;
   font-family: "Luckiest Guy", cursive;

@@ -1,8 +1,9 @@
 const weatherCity = document.querySelector('#weather-city');
 const weatherTemp = document.querySelector('#weather-temp');
 const weatherError = document.querySelector('#weather-error');
-const inputCity = document.querySelector('#city');
+// const inputCity = document.querySelector('#city');
 
+const submitBtn = document.querySelector('#submit-btn');
 const options = {
 	method: 'GET',
 	headers: {
@@ -11,7 +12,8 @@ const options = {
 	}
 };
 
-inputCity.addEventListener('keyup', () => {
+submitBtn.addEventListener('click', (event) => {
+	event.preventDefault();
 	const city = document.querySelector('#city').value;
 	fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`, options)
 		.then(response => response.json())
@@ -23,9 +25,11 @@ inputCity.addEventListener('keyup', () => {
 			} else {
 				const temperature = data.current.temp_c;
 				const cityName = data.location.name;
+				const imgTime = data.current.condition.icon;
 				weatherCity.innerHTML = `${cityName}`;
-				weatherTemp.innerHTML = `${temperature}°C`;
+				weatherTemp.innerHTML = `<img src="${imgTime}"/><p>${temperature}°C</p>`;
 				weatherError.innerHTML = '';
+				console.log(data);
 			}
 		})
 });
